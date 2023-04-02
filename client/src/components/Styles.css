@@ -1,0 +1,318 @@
+@import url('https://fonts.googleapis.com/css2?family=Lily+Script+One&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Gruppo&display=swap');
+
+.App{
+   width: 100vw;
+   height: 100vh;
+   margin: 1px;
+
+   min-width: 20%;
+
+   background: rgb(152,223,221);
+   background: linear-gradient(149deg, rgba(152,223,221,1) 0%, rgba(255,255,255,1) 98%);
+}
+
+ .spinner {
+    display: flex;
+    text-align: center;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+
+    width: 40px;
+    height: 40px;
+    border: 11.2px #1d1d1e double;
+    border-left-style: solid;
+    border-radius: 50%;
+    animation: spinner-aib1d7 0.75s infinite linear;
+ }
+ 
+ @keyframes spinner-aib1d7 {
+    to {
+       transform: rotate(360deg);
+    }
+ }
+
+ .navbar{
+   display: flex;
+   flex-direction: row;
+   justify-content: center;
+   align-items: center;
+
+   width: 100vw;
+   height: 15%;
+
+   text-align: center;
+
+   font-size: x-large;
+
+   font-family: 'Permanent Marker', cursive;;
+   text-decoration: underline whitesmoke;
+   color: rgb(29, 28, 28);
+
+   
+    
+ }
+
+ .head{
+   text-align: center;
+
+   font-size: 40px;
+
+   font-family: 'Permanent Marker', cursive;;
+   text-decoration: underline whitesmoke;
+   color: rgb(29, 28, 28);
+ }
+
+
+ .cards{
+   display: flex;
+   flex-wrap: wrap;
+   align-items: center;
+   justify-content: center;
+
+   width: 80%;
+   height: 74%;
+   margin: auto;
+   gap: 1rem;
+   margin-top: 2%;
+   margin-bottom: 2%;
+
+   padding: 2px;
+
+   overflow: auto;
+
+   transition: all ;
+}
+
+.card{
+   position: relative;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: center;
+   background: rgb(127,204,210);
+   background: linear-gradient(149deg, rgba(127,204,210,1) 0%, rgba(255,255,255,1) 98%);
+   border: dotted rgb(255, 255, 255) 1px;
+
+   border-radius: 10px;
+   padding: 30px;
+   
+   gap: 1rem;
+
+   width: 20%;
+   height: 25%;
+
+
+}
+
+.card:hover{
+
+   height: 30%;
+   transition: 2ms;
+   border: solid rgb(143, 138, 138) 1px;
+   background: rgb(91, 172, 178);
+   background: linear-gradient(149deg, rgb(107, 193, 199) 0%, rgb(218, 214, 214) 98%);
+}
+
+.edit{
+   position: absolute;
+   bottom: 10px;
+   right:10px;
+   cursor: pointer;
+}
+
+.edit:hover{
+   font-size: 2rem;
+   font-weight: bolder;
+}
+
+.card-title{
+   font-family: 'Permanent Marker', cursive;;
+   color: rgb(29, 28, 28);
+
+   font-size: x-large;
+
+   margin-top: 0px;
+   margin-bottom: 10px;
+
+   text-decoration: underline whitesmoke;
+
+}
+
+.card-desc{
+   font-family: 'Gruppo', cursive;
+   font-weight: bolder;
+   color: rgb(111, 111, 111);
+   margin-top: 5px;
+
+   font-size: larger;
+
+}
+
+.add-bttn{
+   cursor: pointer;
+   display: flex;
+   flex-direction: row;
+   justify-content: center;
+   margin: auto;
+   margin-top: 0px;
+
+   background: rgb(127,204,210);
+   background: linear-gradient(149deg, rgba(127,204,210,1) 0%, rgba(255,255,255,1) 98%);
+
+   width: 15%;
+   padding: 10px;
+
+   border: solid whitesmoke 0.2px;
+
+   border-radius: 4px;
+
+   font-family: 'Permanent Marker', cursive;;
+   color: rgb(29, 28, 28);
+
+}
+
+.add-bttn:hover{
+   border: solid black 1px;
+   background: rgb(64, 156, 162);
+   background: linear-gradient(149deg, rgb(75, 170, 177) 0%, rgb(218, 214, 214) 98%);
+   cursor: pointer;
+}
+
+
+.delete-bttn{
+   background: rgb(127,204,210);
+   background: linear-gradient(149deg, rgba(127,204,210,1) 0%, rgba(255,255,255,1) 98%);
+
+   padding: 5px;
+
+   border: solid whitesmoke 0.2px;
+
+   border-radius: 4px;
+
+   font-family: 'Permanent Marker', cursive;;
+   color: rgb(29, 28, 28);
+   font-weight: lighter;
+   font-size: small;
+}
+
+.delete-bttn:hover{
+
+   border: solid black 1px;
+   background: rgb(64, 156, 162);
+   background: linear-gradient(149deg, rgb(75, 170, 177) 0%, rgb(218, 214, 214) 98%);
+   cursor: pointer;
+
+}
+
+.form-container{
+   text-align: center;
+
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+
+   width: 80%;
+   height: 50%;
+   margin: auto;
+
+   margin-top: 100px;
+   
+
+
+}
+
+.form{
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+
+   width: 50%;
+   height: 80%;
+
+   margin: auto;
+   margin-top: 0px;
+
+   gap: 1rem;
+}
+
+.field{
+
+   display: flex;
+   flex-direction: row;
+   justify-content: center;
+   align-items: center;
+   
+   width: 80%;
+   height: 60%;
+   padding: 1rem;
+   gap: 0.5rem;
+
+   font-family: 'Permanent Marker', cursive;;
+   color: rgb(29, 28, 28);
+
+   text-decoration: underline;
+}
+
+.input{
+   width: 80%;
+   height: 50%;
+
+   font-family: 'Gruppo', cursive;
+   font-weight: bolder;
+   font-size: larger;
+   color: rgb(66, 64, 64);
+
+   background-color: rgb(255, 255, 255);
+
+   box-shadow: 10px;
+
+   text-align: center;
+
+
+
+
+}
+
+.input:hover{
+   border: solid rgb(202, 200, 200) 1px;
+}
+
+.submit-bttn{
+   cursor: pointer;
+   display: flex;
+   flex-direction: row;
+   justify-content: center;
+   margin: auto;
+   margin-top: 0px;
+
+   background: rgb(127,204,210);
+   background: linear-gradient(149deg, rgba(127,204,210,1) 0%, rgba(255,255,255,1) 98%);
+
+   width: 55%;
+   padding: 10px;
+
+   border: solid whitesmoke 0.2px;
+
+   border-radius: 4px;
+
+   font-family: 'Permanent Marker', cursive;;
+   font-weight: bolder;
+   font-size: large;
+   color: rgb(29, 28, 28);
+}
+
+.submit-bttn:hover{
+   border: solid black 1px;
+   background: rgb(64, 156, 162);
+   background: linear-gradient(149deg, rgb(75, 170, 177) 0%, rgb(218, 214, 214) 98%);
+   cursor: pointer;
+}
+
+
