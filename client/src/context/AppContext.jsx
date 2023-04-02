@@ -28,7 +28,7 @@ export default function AppContextProvider( {children} ){
         try{
             setLoader(true);
 
-            const response = await axios.get("http://localhost:8060/api/todo");
+            const response = await axios.get("https://team-todoapp.onrender.com/api/todo");
             let output = response.data;
             setTodos(output);
             console.log("got todos",response.data);
@@ -49,7 +49,7 @@ export default function AppContextProvider( {children} ){
         try{
             setLoader(true);
 
-            const response = await axios.post("http://localhost:8060/api/todo",newObj);
+            const response = await axios.post("https://team-todoapp.onrender.com/api/todo",newObj);
             console.log(`posting a new todo`,response.data);
 
 
@@ -69,7 +69,7 @@ export default function AppContextProvider( {children} ){
 
             setLoader(true);
 
-            const response = await axios.delete(`http://localhost:8060/api/todo/${deleteObj._id}`);
+            const response = await axios.delete(`https://team-todoapp.onrender.com/api/todo/${deleteObj._id}`);
             console.log("deleted a todo",response.data);
 
             setLoader(false);
@@ -100,7 +100,7 @@ export default function AppContextProvider( {children} ){
 
             setLoader(true);
 
-            const response = await axios.put(`http://localhost:8060/api/todo/${id}`,obj);
+            const response = await axios.put(`https://team-todoapp.onrender.com/api/todo/${id}`,obj);
             console.log("edited a todo",response.data);
             setFlag(!flag);
             setLoader(false);
